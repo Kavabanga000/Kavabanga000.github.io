@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="stile.css">
+    <script src="main.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Лабко Константин Сергеевич</h1>
+            <p>Привет! Я hikipaio</p>
+            <div class="buttons">
+                <button id="loginButton">Войти</button>
+                <button id="registerButton">Зарегистрироваться</button>
+                <button id="lr10Button">lr10</button>
+                <button id="lr13Button">lr13</button>
+                <button id="lr8Button">lr8</button>
+                <button id="practButton">практика</button>
+                <button id="confirmButton">Показать Confirm и Prompt</button>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <button><a href="#skills">Навыки</a></button>
+        <button><a href="#photos">Фотографии</a></button>
+        <button><a href="#videos">Мои видео</a></button>
+        <button><a href="#socials">Мои соцсети</a></button>
+    </nav>
+    <main>
+        <section id="skills">
+            <h2>Мои навыки</h2>
+            <div class="skills-list">
+                <div>PascalABC</div>
+                <div>CSS</div>
+                <div>C#</div>
+                <div>Adobe Illustrator</div>
+                <div>Html</div>
+                <div>Adobe Photoshop</div>
+                <div>Python</div>
+                <div>Adobe After Effects</div>
+            </div>
+        </section>
+        <section id="photos">
+            <h2>Мои фотографии</h2>
+            <div class="photo-grid">
+                <img src="photo1.jpg" alt="Photo 1">
+                <img src="photo2.jpg" alt="Photo 2">
+            </div>
+        </section>
+        <section id="videos">
+            <h2>Мои видео</h2>
+            <div class="video">
+                <video width="400" height="400" controls>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        <section id="socials">
+            <h2>Мои соцсети</h2>
+            <button><a href="https://www.instagram.com/hikigaio">Мои Instagram</a></button>
+            <button><a href="https://t.me/hikigaio">Мои Telegram</a></button>
+        </section>
+        <section class="projects">
+            <h2>Мои проекты на Git Hub</h2>
+            <table>
+                <tr>
+                    <th>Название</th>
+                    <th>Ссылка</th>
+                </tr>
+                <tr>
+                    <td>Dix</td>
+                    <td><a href="#">Ссылка</a></td>
+                </tr>
+                <tr>
+                    <td>Кто хочет стать миллионером</td>
+                    <td><a href="#">Ссылка</a></td>
+                </tr>
+            </table>
+        </section>
+        <footer>
+            <p>Контакты</p>
+            <p>Почта - labkokosta082@gmail.com</p>
+            <p>Номер Телефона: +375(29) 822-59-45</p>
+            <p id="currentDate"></p>
+        </footer>
+    </main>
+
+    <script>
+        // Обработчики событий для кнопок "Войти" и "Зарегистрироваться"
+        document.getElementById("loginButton").addEventListener("click", function () {
+            alert("Вы нажали на кнопку Войти!");
+            window.location.href = "log.html"; // Переход на страницу входа
+        });
+
+        document.getElementById("registerButton").addEventListener("click", function () {
+            alert("Вы нажали на кнопку Зарегистрироваться!");
+            window.location.href = "reg.html"; // Переход на страницу регистрации
+        });
+
+        // Обработчики событий для кнопок "Войти" и "Зарегистрироваться"
+        document.getElementById("lr10Button").addEventListener("click", function () {
+            alert("Вы нажали на кнопку лр10!");
+            window.location.href = "lr10.html"; // Переход на страницу входа
+        });
+        // Обработчики событий для кнопок "Войти" и "Зарегистрироваться"
+        document.getElementById("lr13Button").addEventListener("click", function () {
+            alert("Вы нажали на кнопку лр13!");
+            window.location.href = "lr13.html"; // Переход на страницу входа
+        });
+        // Обработчики событий для кнопок "Войти" и "Зарегистрироваться"
+        document.getElementById("lr8Button").addEventListener("click", function () {
+            alert("Вы нажали на кнопку Войти!");
+            window.location.href = "lr8.html"; // Переход на страницу входа
+        });
+
+        // Обработчики событий для кнопок "Войти" и "Зарегистрироваться"
+        document.getElementById("practButton").addEventListener("click", function () {
+            alert("Вы нажали на кнопку Практика");
+            window.location.href = "pract.html"; // Переход на страницу входа
+        });
+
+        // Добавление обработчиков событий для кнопок в навигации
+        document.querySelectorAll("nav button a").forEach(function (anchor) {
+            anchor.addEventListener("click", function (event) {
+                event.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+            });
+        });
+
+        // Отображение текущей даты в футере
+        document.getElementById("currentDate").textContent = "Сегодняшняя дата: " + new Date().toLocaleDateString();
+
+        // Обработка формы регистрации
+        if (document.location.pathname.endsWith("reg.html")) {
+            const form = document.querySelector("form");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                alert("Форма успешно отправлена!");
+            });
+        }
+    </script>
+</body>
+</html>

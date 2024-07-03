@@ -1,0 +1,442 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+    .logo img {
+        height: 50px;
+    }
+
+    .logo span {
+        margin-left: 10px;
+        font-size: 14px;
+        color: #333;
+    }
+
+.contact-info {
+    display: flex;
+    align-items: center;
+}
+
+    .contact-info div {
+        margin-right: 20px;
+    }
+
+.book-button {
+    background-color: #3DBEFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+nav {
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px 20px;
+        display: flex;
+    }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+            nav ul li a {
+                text-decoration: none;
+                color: #333;
+                font-size: 14px;
+            }
+
+.hero {
+    background-image: url('b204f99e8e374172452cf69dc98725b7.png'); /* Background image URL */
+    background-size: cover;
+    background-position: center;
+    padding: 150px 20px;
+    text-align: center;
+    color: #333;
+}
+
+    .hero h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .hero span {
+        color: #FF9F00;
+    }
+
+.book-room-button {
+    background-color: #3DBEFF;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.advantages {
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+    .advantages h2 {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+.advantages-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.advantage {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+    .advantage img {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .advantage p {
+        font-size: 14px;
+        color: #333;
+    }
+
+.advertisement {
+    margin-top: 50px;
+    text-align: center;
+}
+
+    .advertisement img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+.top-sellers {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+    .top-sellers h2 {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+.top-sellers-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-seller {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+    .top-seller img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .top-seller p {
+        font-size: 16px;
+        margin: 10px 0;
+        color: #333;
+    }
+
+    .top-seller button {
+        background-color: #3DBEFF;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+.tezplus {
+    text-align: center;
+    max-width: 1000px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 40px auto;
+}
+
+    .tezplus h1 {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+
+    .tezplus h2 {
+        font-size: 1.2em;
+        color: #777;
+        margin-bottom: 20px;
+    }
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.feature {
+    width: 30%;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+    .feature img {
+        display: block;
+        margin: 0 auto 10px;
+    }
+
+    .feature h3 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+
+    .feature p {
+        font-size: 0.9em;
+        color: #555;
+    }
+
+.book-now {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .book-now:hover {
+        background-color: #45a049;
+    }
+
+h1, h2 {
+    text-align: center;
+    color: #333333;
+}
+
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    padding: 40px;
+}
+
+.award {
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    .award img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .award p {
+        font-size: 14px;
+        color: #555555;
+    }
+
+.offices {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+    .offices h2 {
+        margin-bottom: 10px;
+    }
+
+    .offices p {
+        margin-bottom: 20px;
+        color: #777;
+    }
+
+.offices-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+    .offices-images img {
+        max-width: 150px;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+    .testimonials h2 {
+        margin-bottom: 30px;
+    }
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    .testimonial .name {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .testimonial .review {
+        font-size: 14px;
+        color: #555555;
+    }
+
+.contacts {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+    .contacts h2 {
+        margin-bottom: 30px;
+    }
+
+.contacts-footer img {
+    max-width: 100%;
+    height: auto;
+}
+/* Адаптация для планшетов и телефонов */
+@media (max-width: 1024px) {
+    .advantages-container, .top-sellers-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feature {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .advantages-container, .top-sellers-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+        nav ul li {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
+
+    .feature {
+        width: 100%;
+    }
+
+    .offices-images {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .book-room-button, .top-seller button, .book-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .advantages h2, .top-sellers h2 {
+        font-size: 20px;
+    }
+
+    .top-seller p {
+        font-size: 14px;
+    }
+
+    .advertisement img {
+        border-radius: 5px;
+    }
+
+    .tezplus {
+        padding: 10px;
+    }
+
+        .tezplus h1 {
+            font-size: 1.5em;
+        }
+
+        .tezplus h2 {
+            font-size: 1em;
+        }
+}

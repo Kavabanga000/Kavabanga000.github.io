@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="keywords" content="lr10-12">
+        <title>Лабко Константин</title>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+        
+        <link href="style-grid.css" rel="stylesheet">
+
+        <script src="script10.js"></script>
+        <button  onclick="showMinutes()">минут в часе</button>
+        <script>
+        function showMinutes() {
+            let date = new Date();
+            let minutes = date.getMinutes();
+            alert(`Текущее количество минут: ${minutes}`);
+        }
+        </script>
+
+
+        
+    </head>
+    <body>
+
+        <script>
+            let name = "Константин";
+            let surname = "Лабко";
+            let count = 0;
+
+            while (count < 5) {
+                document.write(`Фамилия: ${surname}, Имя: ${name}<br>`);
+                count++;
+            }
+        </script>
+
+        <script>
+            // Формируем массив из 10 целых элементов
+            let arr = [];
+            for (let i = 0; i < 10; i++) {
+                arr.push(Math.floor(Math.random() * 20) - 10);
+            }
+
+            // Выводим на страницу только отрицательные элементы массива в одну строку
+            let negativeElements = arr.filter(x => x < 0).join(', ');
+            document.write(`Отрицательные элементы массива: ${negativeElements}<br>`);
+
+            // Сортируем массив по убыванию
+            arr.sort((a, b) => b - a);
+
+            // Выводим на страницу отсортированный массив в одну строку
+            let sortedArray = arr.join(', ');
+            document.write(`Отсортированный массив: ${sortedArray}<br>`);
+        </script>
+
+        <script>
+            let S1 = "Лабко";
+            let S2 = "Балицкого 39";
+
+            // Определяем длину строки S1
+            let lengthS1 = S1.length;
+            document.write(`Длина строки S1: ${lengthS1}<br>`);
+
+            // Выполняем сцепление строк S1 и S2
+            let concatenatedString = S1 + " " + S2;
+            document.write(`Сцепленная строка: ${concatenatedString}<br>`);
+
+            // Преобразуем строку S2 в верхний регистр
+            let upperCaseS2 = S2.toUpperCase();
+            document.write(`Строка S2 в верхнем регистре: ${upperCaseS2}<br>`);
+        </script>
+
+        <h1>Calculator</h1>
+        <button onclick="calculateAndDisplayResult()">Calculate</button>
+        <p id="result"></p>
+
+
+
+
+        <select id="operation">
+            <option value="add">Addition</option>
+            <option value="sub">Subtraction</option>
+            <option value="mul">Multiplication</option>
+            <option value="div">Division</option>
+        </select>
+
+        <input id="num1" type="number" value="0">
+        <input id="num2" type="number" value="0">
+
+        <button onclick="calculate()">Calculate</button>
+
+        <p id="result"></p>
+
+        <button onclick="showOSInfo()">Показать информацию об ОС</button>
+        <script>
+           function showOSInfo() { const os = navigator.platform; alert(`Операционная система: ${os}`); }
+        </script>
+
+
+
+
+
+    </body>
+</html>

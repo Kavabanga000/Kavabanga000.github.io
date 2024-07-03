@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница Регистрации</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+
+    <form>
+        <h2>Регистрация</h2>
+        <!-- Здесь разместите форму для регистрации -->
+
+        <p>Уже есть аккаунт? <a href="log.html">Войдите</a>.</p>
+
+        <div class="input-container">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username">
+        </div>
+
+        <div class="input-container">
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password">
+        </div>
+
+        <div class="input-container">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+
+        <div class="input-container">
+            <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+            <label for="subscribe">Подписаться на рассылку</label>
+        </div>
+
+        <div class="input-container">
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Мужской</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Женский</label>
+        </div>
+
+        <div class="input-container">
+            <label for="country">Страна:</label>
+            <select id="country" name="country">
+                <option value="Россия">Россия</option>
+                <option value="Беларусь">Беларусь</option>
+                <option value="Казахстан">Казахстан</option>
+            </select>
+        </div>
+
+        <button type="submit">Зарегистрироваться</button>
+
+        <p>Хотите вернуться на форму Резюмэ? <a href="Index.html">Резюмэ</a>.</p>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивная страница</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .form-container, .product-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .form-header, .product-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+            .form-header h1, .product-header h1 {
+                margin: 0;
+                font-size: 24px;
+            }
+
+        .form-section, .product-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .form-group, .product-details, .product-image {
+            flex: 1;
+            margin: 0 10px;
+        }
+
+            .form-group label, .product-details p, .product-details a, .product-details button {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .form-group input, .form-group select {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+            }
+
+        .form-footer {
+            text-align: center;
+        }
+
+            .form-footer button, .product-details button {
+                background-color: #00bfff;
+                color: #ffffff;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+
+        .product-details button {
+            background-color: #6a1b9a;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Адаптация для ноутбуков */
+        @media (max-width: 1024px) {
+            .form-section, .product-info {
+                flex-direction: column;
+            }
+        }
+
+        /* Адаптация для планшетов */
+        @media (max-width: 768px) {
+            .form-group, .product-details, .product-image {
+                margin: 10px 0;
+                width: 100%;
+            }
+        }
+
+        /* Адаптация для телефонов */
+        @media (max-width: 480px) {
+            .form-container, .product-container {
+                padding: 10px;
+            }
+
+            .form-footer button, .product-details button {
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Форма покупки абонемента -->
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Выбери оптимальный вариант покупки</h1>
+            </div>
+            <form>
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="training-type">Тип тренировок</label>
+                        <select id="training-type" name="training-type">
+                            <option>Тренажерный зал</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sessions-per-month">Количество занятий в месяц</label>
+                        <select id="sessions-per-month" name="sessions-per-month">
+                            <option>3 занятия</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="months">Количество месяцев</label>
+                        <select id="months" name="months">
+                            <option>3 месяца</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="subscription-type">Тип абонемента</label>
+                        <select id="subscription-type" name="subscription-type">
+                            <option>Именной</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <p>Цена абонемента: 850 руб.</p>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="payment-method">Способ покупки абонемента</label>
+                        <select id="payment-method" name="payment-method">
+                            <option>Наличные</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="delivery-method">Способ доставки</label>
+                        <select id="delivery-method" name="delivery-method">
+                            <option>Курьером на дом</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Ваш E-mail</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="fio">Ваше ФИО</label>
+                        <input type="text" id="fio" name="fio">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Ваш телефон</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                </div>
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="city">Город</label>
+                        <select id="city" name="city">
+                            <option>Владимир</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="street">Улица</label>
+                        <input type="text" id="street" name="street">
+                    </div>
+                    <div class="form-group">
+                        <label for="house">Дом</label>
+                        <input type="text" id="house" name="house">
+                    </div>
+                    <div class="form-group">
+                        <label for="apartment">Квартира</label>
+                        <input type="text" id="apartment" name="apartment">
+                    </div>
+                </div>
+                <div class="form-footer">
+                    <button type="submit">Купить абонемент</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Карточка товара -->
+        <div class="product-container">
+            <div class="product-header">
+                <h1>Юбка Lacoste</h1>
+            </div>
+            <div class="product-info">
+                <div class="product-image">
+                    <img src="images/Image.jpg" alt="Юбка Lacoste">
+                </div>
+                <div class="product-details">
+                    <p>Товар в наличии</p>
+                    <p><strong>10 800 ₽</strong> <s>12 000 ₽</s></p>
+                    <div>
+                        <span>Цвета:</span>
+                        <button style="background-color: #4d4d4d; color: #fff;">&nbsp;&nbsp;</button>
+                        <button style="background-color: #8e8e8e; color: #fff;">&nbsp;&nbsp;</button>
+                    </div>
+                    <div>
+                        <span>Размеры:</span>
+                        <button>40</button>
+                        <button>44</button>
+                        <button>46</button>
+                    </div>
+                    <a href="#">Варианты доставки для местоположения Санкт-Петербург</a>
+                    <div>
+                        <button>Добавить в корзину</button>
+                        <button>Заказать в 1 клик</button>
+                    </div>
+                    <div>
+                        <h3>Характеристики</h3>
+                        <p>Артикул: 123456</p>
+                        <p>Материал: хлопок</p>
+                        <p>Производитель: Lacoste</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

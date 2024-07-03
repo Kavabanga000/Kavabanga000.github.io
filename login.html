@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование номера</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header>
+        <h1>Бронирование номера</h1>
+        <nav>
+            <ul>
+                <li><a href="практика.html">Главная</a></li>
+                <li><a href="#rooms">Номера</a></li>
+                <li><a href="#booking">Бронирование</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Добро пожаловать в наш отель!</h2>
+        <p>Наслаждайтесь роскошным отдыхом в любом уголке мира.</p>
+    </section>
+
+    <section id="rooms">
+        <h2>Наши номера</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Тип номера</th>
+                    <th>Описание</th>
+                    <th>Цена за ночь</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Стандартный номер</td>
+                    <td>Удобный номер с одной кроватью и всеми необходимыми удобствами.</td>
+                    <td>50$</td>
+                </tr>
+                <tr>
+                    <td>Апартаменты</td>
+                    <td>Просторные апартаменты с кухней и гостиной зоной.</td>
+                    <td>120$</td>
+                </tr>
+                <tr>
+                    <td>Вилла</td>
+                    <td>Роскошная вилла с бассейном и великолепным видом.</td>
+                    <td>300$</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="booking">
+        <h2>Форма бронирования</h2>
+        <form action="submit_booking.php" method="post">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Электронная почта:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="checkin">Дата заезда:</label>
+            <input type="date" id="checkin" name="checkin" required><br>
+
+            <label for="checkout">Дата выезда:</label>
+            <input type="date" id="checkout" name="checkout" required><br>
+
+            <label for="room_type">Тип номера:</label>
+            <select id="room_type" name="room_type" required>
+                <option value="standard">Стандартный номер</option>
+                <option value="apartment">Апартаменты</option>
+                <option value="villa">Вилла</option>
+            </select><br>
+
+            <button type="submit">Забронировать</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Контакты</h2>
+        <p>Телефон: +1 (123) 456-7890</p>
+        <p>Email: info@hotelbooking.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hotel Booking. Все права защищены.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Задания по JavaScript</title>
+  
+</head>
+<body>
+    <!-- информация о себе -->
+    <p>Лабко Константин Сергеевич</p>
+    
+    <!-- дата рождения -->
+    <div id="birth-date">19.09.2005</div>
+    
+    <!-- любое изображение -->
+    <img src="https://via.placeholder.com/150" alt="Изображение">
+    
+    <!-- элемент №1 для удаления -->
+    <p id="element-1">Элемент №1 (нажмите, чтобы удалить)</p>
+    
+    <!-- элемент №2 для стилизации -->
+    <h3 id="element-2">Элемент №2 (нажмите, чтобы применить стили)</h3>
+    
+    <script>
+      // 1. Получить информацию о дате размере html-документа
+      var docInfo = document.documentElement.outerHTML.length;
+      alert("Размер html-документа: " + docInfo + " символов");
+      
+      // 2. Вывести полученную информацию многократно через каждые 5 секунд
+      setInterval(function() {
+        alert("Размер html-документа: " + docInfo + " символов");
+      }, 5000);
+      
+      // 3. Удалить элемент №1 при щелчке по нему
+      document.getElementById("element-1").addEventListener("click", function() {
+        this.remove();
+      });
+      
+      // стилизация элемента №2
+      document.getElementById("element-2").addEventListener("click", function() {
+      this.style.color = "red";
+      this.style.backgroundColor = "green";
+      this.style.fontWeight = "bold";
+      this.style.fontFamily = "Arial";
+      this.style.fontSize = "16px";
+      this.style.border = "2px solid yellow";
+      });
+      
+      // 1. Вывести информацию о том, включены ли cookie в браузере пользователя
+      alert("Cookie enabled: " + navigator.cookieEnabled);
+      
+      // 2. Закрыть текущее окно браузера через 2 секунды после открытия
+      setTimeout(function() {
+        alert("Закрытие окна браузера...");
+        //window.close(); 
+      }, 2000);
+    </script>
+  </body>
+</html>
