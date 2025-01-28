@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задания по HTML, CSS и JavaScript</title>
+    <style>
+        .form-container {
+            margin: 20px 0;
+        }
+        .validation-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Задания по HTML, CSS и JavaScript</h1>
+
+    <!-- Задание 1: Получение данных из пользовательских форм -->
+    <div class="form-container">
+        <h2>Форма для получения данных</h2>
+        <form id="userForm">
+            <label>Имя: <input type="text" id="userName" name="userName"></label><br>
+            <label>Возраст: <input type="number" id="userAge" name="userAge"></label><br>
+            <label><input type="checkbox" id="agree" name="agree"> Согласен с условиями</label><br>
+            <label>Пол:<br>
+                <input type="radio" name="gender" value="Мужской"> Мужской<br>
+                <input type="radio" name="gender" value="Женский"> Женский
+            </label><br>
+            <label>Выберите страну: 
+                <select id="country" name="country">
+                    <option value="Россия">Россия</option>
+                    <option value="США">США</option>
+                    <option value="Китай">Китай</option>
+                </select>
+            </label><br>
+            <button type="button" id="submitForm">Отправить</button>
+        </form>
+        <p id="formOutput"></p>
+    </div>
+
+    <!-- Задание 2: Валидация форм -->
+    <div class="form-container">
+        <h2>Форма с валидацией</h2>
+        <form id="validationForm">
+            <label>Email: <input type="email" id="email" name="email" required></label><br>
+            <label>Пароль: <input type="password" id="password" name="password" required></label><br>
+            <button type="button" id="validateForm">Проверить</button>
+        </form>
+        <p id="validationMessage" class="validation-message"></p>
+    </div>
+
+    <!-- Задание 3: Работа с регулярными выражениями -->
+    <div class="form-container">
+        <h2>Проверка регулярных выражений</h2>
+        <form id="regexForm">
+            <label>Введите текст для проверки: <input type="text" id="regexInput"></label><br>
+            <button type="button" id="checkRegex">Проверить</button>
+        </form>
+        <p id="regexOutput"></p>
+    </div>
+
+    <script>
+        // Задание 1: Получение данных из пользовательских форм
+        document.getElementById('submitForm').addEventListener('click', () => {
+            const name = document.getElementById('userName').value;
+            const age = document.getElementById('userAge').value;
+            const agree = document.getElementById('agree').checked;
+            const gender = document.querySelector('input[name="gender"]:checked')?.value || 'Не указан';
+            const country = document.getElementById('country').value;
+            
+            const output = `Имя: ${name}, Возраст: ${age}, Согласие: ${agree ? 'Да' : 'Нет'}, Пол: ${gender}, Страна: ${country}`;
+            document.getElementById('formOutput').textContent = output;
+        });
+
+        // Задание 2: Валидация форм
+        document.getElementById('validateForm').addEventListener('click', () => {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const messageElement = document.getElementById('validationMessage');
+            
+            if (!email.includes('@')) {
+                messageElement.textContent = 'Некорректный email.';
+                return;
+            }
+
+            if (password.length < 6) {
+                messageElement.textContent = 'Пароль должен содержать не менее 6 символов.';
+                return;
+            }
+
+            messageElement.textContent = 'Форма успешно валидирована!';
+        });
+
+        // Задание 3: Работа с регулярными выражениями
+        document.getElementById('checkRegex').addEventListener('click', () => {
+            const input = document.getElementById('regexInput').value;
+            const regex = /\d+/g; // Находит числа
+
+            const testResult = regex.test(input);
+            const execResult = regex.exec(input);
+            const splitResult = input.split(regex);
+            const matchResult = input.match(regex);
+            const searchResult = input.search(regex);
+            const replaceResult = input.replace(regex, 'NUM');
+
+            const output = `
+                Test: ${testResult},
+                Exec: ${execResult},
+                Split: ${splitResult.join('|')},
+                Match: ${matchResult},
+                Search: ${searchResult},
+                Replace: ${replaceResult}
+            `;
+
+            document.getElementById('regexOutput').textContent = output;
+        });
+    </script>
+</body>
+</html>

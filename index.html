@@ -21,6 +21,7 @@
                 <button id="lr8Button">lr8</button>
                 <button id="practButton">практика</button>
                 <button id="confirmButton">Показать Confirm и Prompt</button>
+                <button id="lr15Button">lr15</button>
             </div>
         </div>
     </header>
@@ -123,6 +124,12 @@
             window.location.href = "pract.html"; // Переход на страницу входа
         });
 
+        document.getElementById("lr15Button").addEventListener("click", function () {
+            alert("Вы нажали на кнопку Практика");
+            window.location.href = "clumsy-bird-master/index.html"; // Переход на страницу входа
+        });
+
+
         // Добавление обработчиков событий для кнопок в навигации
         document.querySelectorAll("nav button a").forEach(function (anchor) {
             anchor.addEventListener("click", function (event) {
@@ -131,6 +138,7 @@
                 document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
             });
         });
+
 
         // Отображение текущей даты в футере
         document.getElementById("currentDate").textContent = "Сегодняшняя дата: " + new Date().toLocaleDateString();
